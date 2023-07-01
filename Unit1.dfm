@@ -3,7 +3,6 @@ object Form1: TForm1
   Top = 182
   Width = 870
   Height = 450
-  VertScrollBar.Position = 48
   Caption = 'Form1'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -16,14 +15,20 @@ object Form1: TForm1
   TextHeight = 13
   object lbl1: TLabel
     Left = 376
-    Top = -40
-    Width = 63
-    Height = 13
+    Top = 0
+    Width = 86
+    Height = 17
     Caption = 'DATA SISWA'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -15
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
   end
   object pnl1: TPanel
-    Left = 88
-    Top = -24
+    Left = 80
+    Top = 24
     Width = 697
     Height = 345
     TabOrder = 0
@@ -303,7 +308,7 @@ object Form1: TForm1
       TabOrder = 17
     end
     object btn6: TButton
-      Left = 592
+      Left = 576
       Top = 296
       Width = 75
       Height = 25
@@ -313,7 +318,7 @@ object Form1: TForm1
   end
   object dbgrd1: TDBGrid
     Left = 88
-    Top = 328
+    Top = 376
     Width = 697
     Height = 120
     DataSource = ds1
@@ -328,7 +333,6 @@ object Form1: TForm1
     ControlsCodePage = cGET_ACP
     UTF8StringsAsWideField = False
     AutoEncodeStrings = False
-    Connected = True
     HostName = 'localhost'
     Port = 3306
     Database = 'laporan_siswa'
@@ -340,7 +344,6 @@ object Form1: TForm1
   end
   object zqry1: TZQuery
     Connection = con1
-    Active = True
     SQL.Strings = (
       'select * from data_siswa')
     Params = <>

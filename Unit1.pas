@@ -48,6 +48,8 @@ type
     con1: TZConnection;
     zqry1: TZQuery;
     ds1: TDataSource;
+    procedure bersih;
+    procedure posisawal;
   private
     { Private declarations }
   public
@@ -60,5 +62,17 @@ var
 implementation
 
 {$R *.dfm}
+procedure TForm1.bersih;
+begin
+edt1.Clear;
+edt2.Clear;
+edt3.Clear;
+edt4.Clear;
+edt5.Clear;
+edt6.Clear;
+edt7.Clear;
+edt8.Clear;
+edt9.Clear;
+end;
 
 end.
