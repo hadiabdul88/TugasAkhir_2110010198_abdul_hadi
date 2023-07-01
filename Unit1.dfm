@@ -1,8 +1,9 @@
 object Form1: TForm1
   Left = 192
-  Top = 152
+  Top = 182
   Width = 870
   Height = 450
+  VertScrollBar.Position = 48
   Caption = 'Form1'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -15,14 +16,14 @@ object Form1: TForm1
   TextHeight = 13
   object lbl1: TLabel
     Left = 376
-    Top = 8
+    Top = -40
     Width = 63
     Height = 13
     Caption = 'DATA SISWA'
   end
   object pnl1: TPanel
     Left = 88
-    Top = 24
+    Top = -24
     Width = 697
     Height = 345
     TabOrder = 0
@@ -312,14 +313,43 @@ object Form1: TForm1
   end
   object dbgrd1: TDBGrid
     Left = 88
-    Top = 376
+    Top = 328
     Width = 697
     Height = 120
+    DataSource = ds1
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+  end
+  object con1: TZConnection
+    ControlsCodePage = cGET_ACP
+    UTF8StringsAsWideField = False
+    AutoEncodeStrings = False
+    Connected = True
+    HostName = 'localhost'
+    Port = 3306
+    Database = 'laporan_siswa'
+    User = 'root'
+    Protocol = 'mysql'
+    LibraryLocation = 'D:\Semester-4\delphi\TugasAkhir\libmysql.dll'
+    Left = 792
+    Top = 56
+  end
+  object zqry1: TZQuery
+    Connection = con1
+    Active = True
+    SQL.Strings = (
+      'select * from data_siswa')
+    Params = <>
+    Left = 808
+    Top = 120
+  end
+  object ds1: TDataSource
+    DataSet = zqry1
+    Left = 800
+    Top = 176
   end
 end
