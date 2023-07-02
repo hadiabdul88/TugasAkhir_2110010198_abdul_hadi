@@ -3,7 +3,6 @@ object Form5: TForm5
   Top = 152
   Width = 870
   Height = 450
-  VertScrollBar.Position = 53
   Caption = 'Form5'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -16,7 +15,7 @@ object Form5: TForm5
   TextHeight = 13
   object lbl1: TLabel
     Left = 336
-    Top = -45
+    Top = 8
     Width = 96
     Height = 15
     Caption = 'DATA CATATAN'
@@ -29,7 +28,7 @@ object Form5: TForm5
   end
   object pnl1: TPanel
     Left = 40
-    Top = -21
+    Top = 32
     Width = 689
     Height = 281
     TabOrder = 0
@@ -253,7 +252,7 @@ object Form5: TForm5
   end
   object dbgrd1: TDBGrid
     Left = 24
-    Top = 291
+    Top = 344
     Width = 801
     Height = 120
     DataSource = ds1
