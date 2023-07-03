@@ -3,6 +3,7 @@ object Form6: TForm6
   Top = 160
   Width = 870
   Height = 453
+  VertScrollBar.Position = 50
   Caption = 'Form6'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -11,11 +12,12 @@ object Form6: TForm6
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
     Left = 360
-    Top = 0
+    Top = -50
     Width = 70
     Height = 15
     Caption = 'DATA SISWA'
@@ -28,7 +30,7 @@ object Form6: TForm6
   end
   object pnl1: TPanel
     Left = 40
-    Top = 16
+    Top = -34
     Width = 737
     Height = 313
     TabOrder = 0
@@ -244,6 +246,7 @@ object Form6: TForm6
       Height = 25
       Caption = 'SIMPAN'
       TabOrder = 14
+      OnClick = btn2Click
     end
     object btn3: TButton
       Left = 272
@@ -252,6 +255,7 @@ object Form6: TForm6
       Height = 25
       Caption = 'UBAH'
       TabOrder = 15
+      OnClick = btn3Click
     end
     object btn4: TButton
       Left = 384
@@ -260,6 +264,7 @@ object Form6: TForm6
       Height = 25
       Caption = 'HAPUS'
       TabOrder = 16
+      OnClick = btn4Click
     end
     object btn5: TButton
       Left = 496
@@ -268,6 +273,7 @@ object Form6: TForm6
       Height = 25
       Caption = 'BATAL'
       TabOrder = 17
+      OnClick = btn5Click
     end
     object btn6: TButton
       Left = 608
@@ -280,7 +286,7 @@ object Form6: TForm6
   end
   object dbgrd1: TDBGrid
     Left = 40
-    Top = 344
+    Top = 294
     Width = 737
     Height = 120
     DataSource = ds1
@@ -290,6 +296,7 @@ object Form6: TForm6
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
