@@ -5,7 +5,8 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, Grids, DBGrids, DB, ZAbstractRODataset, ZAbstractDataset,
-  ZDataset, ZAbstractConnection, ZConnection, StdCtrls, ComCtrls, ExtCtrls;
+  ZDataset, ZAbstractConnection, ZConnection, StdCtrls, ComCtrls, ExtCtrls,
+  frxClass, frxDBSet;
 
 type
   TForm5 = class(TForm)
@@ -37,6 +38,8 @@ type
     zqry1: TZQuery;
     ds1: TDataSource;
     dbgrd1: TDBGrid;
+    frxdbdtst1: TfrxDBDataset;
+    frxrprt1: TfrxReport;
     procedure posisiawal;
     procedure bersih;
     procedure btn1Click(Sender: TObject);
@@ -46,6 +49,7 @@ type
     procedure dbgrd1CellClick(Column: TColumn);
     procedure btn4Click(Sender: TObject);
     procedure btn5Click(Sender: TObject);
+    procedure btn6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -227,6 +231,11 @@ end;
 procedure TForm5.btn5Click(Sender: TObject);
 begin
 bersih;
+end;
+
+procedure TForm5.btn6Click(Sender: TObject);
+begin
+frxrprt1.ShowReport();
 end;
 
 end.

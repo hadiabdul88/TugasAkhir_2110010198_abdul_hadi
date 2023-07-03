@@ -249,7 +249,7 @@ object Form6: TForm6
       OnClick = btn2Click
     end
     object btn3: TButton
-      Left = 272
+      Left = 264
       Top = 264
       Width = 75
       Height = 25
@@ -258,8 +258,8 @@ object Form6: TForm6
       OnClick = btn3Click
     end
     object btn4: TButton
-      Left = 384
-      Top = 272
+      Left = 368
+      Top = 264
       Width = 75
       Height = 25
       Caption = 'HAPUS'
@@ -267,8 +267,8 @@ object Form6: TForm6
       OnClick = btn4Click
     end
     object btn5: TButton
-      Left = 496
-      Top = 272
+      Left = 472
+      Top = 264
       Width = 75
       Height = 25
       Caption = 'BATAL'
@@ -276,7 +276,7 @@ object Form6: TForm6
       OnClick = btn5Click
     end
     object btn6: TButton
-      Left = 608
+      Left = 568
       Top = 272
       Width = 75
       Height = 25
