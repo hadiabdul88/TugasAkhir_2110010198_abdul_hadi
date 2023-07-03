@@ -44,6 +44,7 @@ type
     procedure FormShow(Sender: TObject);
     procedure btn1Click(Sender: TObject);
     procedure dbgrd1CellClick(Column: TColumn);
+    procedure btn4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -204,6 +205,25 @@ edt8.Text := zqry1.FieldList[8].AsString;
   edt6.Enabled := True;
   edt7.Enabled := True;
   edt8.Enabled := True;
+end;
+
+procedure TForm2.btn4Click(Sender: TObject);
+begin
+if MessageDlg('Apakah Anda Yakin Menghapus Data Ini?',mtWarning,[mbYes,mbNo],0)= mryes then
+begin
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('delete from data_wali_kelas where id ="'+id+'"');
+  zqry1.ExecSQL;
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select * from data_wali_kelas');
+  zqry1.Open;
+  ShowMessage('Data Berhasil Dihapus');
+  posisiawal;
+end else
+begin
+  ShowMessage('Data Batal Dihapus');
+  posisiawal;
+end;
 end;
 
 end.
