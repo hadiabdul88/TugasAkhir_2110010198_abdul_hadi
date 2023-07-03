@@ -1,8 +1,8 @@
 object Form5: TForm5
-  Left = 192
-  Top = 152
+  Left = 173
+  Top = 254
   Width = 870
-  Height = 450
+  Height = 517
   Caption = 'Form5'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -227,6 +227,7 @@ object Form5: TForm5
       Height = 25
       Caption = 'UBAH'
       TabOrder = 10
+      OnClick = btn3Click
     end
     object btn4: TButton
       Left = 360
@@ -235,6 +236,7 @@ object Form5: TForm5
       Height = 25
       Caption = 'HAPUS'
       TabOrder = 11
+      OnClick = btn4Click
     end
     object btn5: TButton
       Left = 480
@@ -243,6 +245,7 @@ object Form5: TForm5
       Height = 25
       Caption = 'BATAL'
       TabOrder = 12
+      OnClick = btn5Click
     end
     object btn6: TButton
       Left = 584
@@ -255,9 +258,9 @@ object Form5: TForm5
   end
   object dbgrd1: TDBGrid
     Left = 24
-    Top = 344
+    Top = 320
     Width = 801
-    Height = 120
+    Height = 81
     DataSource = ds1
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
@@ -265,6 +268,7 @@ object Form5: TForm5
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
