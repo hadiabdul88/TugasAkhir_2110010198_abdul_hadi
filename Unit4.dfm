@@ -22,8 +22,8 @@ object Form4: TForm4
     Caption = 'DATA POIN'
   end
   object pnl1: TPanel
-    Left = 216
-    Top = 24
+    Left = 208
+    Top = 32
     Width = 401
     Height = 257
     TabOrder = 0
@@ -106,6 +106,7 @@ object Form4: TForm4
       Height = 25
       Caption = 'HAPUS'
       TabOrder = 6
+      OnClick = btn4Click
     end
     object btn5: TButton
       Left = 128
@@ -114,6 +115,7 @@ object Form4: TForm4
       Height = 25
       Caption = 'BATAL'
       TabOrder = 7
+      OnClick = btn5Click
     end
     object btn6: TButton
       Left = 240

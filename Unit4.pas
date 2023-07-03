@@ -34,6 +34,8 @@ type
     procedure btn2Click(Sender: TObject);
     procedure btn3Click(Sender: TObject);
     procedure dbgrd1CellClick(Column: TColumn);
+    procedure btn4Click(Sender: TObject);
+    procedure btn5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -149,6 +151,30 @@ id:=zqry1.Fields[0].AsString;
   edt1.Enabled := True;
   edt2.Enabled := True;
   edt3.Enabled := True;
+end;
+
+procedure TForm4.btn4Click(Sender: TObject);
+begin
+if MessageDlg('Apakah Anda Yakin Menghapus Data Ini?',mtWarning,[mbYes,mbNo],0)= mryes then
+begin
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('delete from tabel_poin where id ="'+id+'"');
+  zqry1.ExecSQL;
+  zqry1.SQL.Clear;
+  zqry1.SQL.Add('select * from tabel_poin');
+  zqry1.Open;
+  ShowMessage('Data Berhasil Dihapus');
+  posisiawal;
+end else
+begin
+  ShowMessage('Data Batal Dihapus');
+  posisiawal;
+end;
+end;
+
+procedure TForm4.btn5Click(Sender: TObject);
+begin
+bersih;
 end;
 
 end.
