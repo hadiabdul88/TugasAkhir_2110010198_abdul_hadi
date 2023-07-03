@@ -16,8 +16,8 @@ object Form2: TForm2
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
-    Left = 384
-    Top = -4
+    Left = 328
+    Top = 4
     Width = 131
     Height = 17
     Caption = 'DATA WALI KELAS'
@@ -236,6 +236,7 @@ object Form2: TForm2
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
