@@ -11,6 +11,7 @@ object Form5: TForm5
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
@@ -146,8 +147,8 @@ object Form5: TForm5
       TabOrder = 0
     end
     object edt1: TEdit
-      Left = 88
-      Top = 64
+      Left = 96
+      Top = 56
       Width = 129
       Height = 21
       TabOrder = 1
@@ -208,6 +209,7 @@ object Form5: TForm5
       Height = 25
       Caption = 'BARU'
       TabOrder = 8
+      OnClick = btn1Click
     end
     object btn2: TButton
       Left = 136
@@ -216,6 +218,7 @@ object Form5: TForm5
       Height = 25
       Caption = 'SIMPAN'
       TabOrder = 9
+      OnClick = btn2Click
     end
     object btn3: TButton
       Left = 248
