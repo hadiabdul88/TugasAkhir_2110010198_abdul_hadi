@@ -1,9 +1,9 @@
 object Form2: TForm2
   Left = 192
-  Top = 152
+  Top = 151
   Width = 870
-  Height = 450
-  VertScrollBar.Position = 13
+  Height = 451
+  VertScrollBar.Position = 12
   Caption = 'Form2'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -12,11 +12,12 @@ object Form2: TForm2
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
     Left = 384
-    Top = -5
+    Top = -4
     Width = 131
     Height = 17
     Caption = 'DATA WALI KELAS'
@@ -29,7 +30,7 @@ object Form2: TForm2
   end
   object pnl1: TPanel
     Left = 24
-    Top = 19
+    Top = 20
     Width = 713
     Height = 257
     Font.Charset = ANSI_CHARSET
@@ -86,26 +87,26 @@ object Form2: TForm2
       Height = 15
       Caption = 'MAPEL'
     end
-    object Label1: TLabel
-      Left = 424
-      Top = 32
-      Width = 33
-      Height = 1
-      Caption = 'Label1'
-    end
     object lbl7: TLabel
-      Left = 408
+      Left = 400
       Top = 72
       Width = 96
       Height = 15
       Caption = 'TINGKAT KELAS'
     end
     object lbl8: TLabel
-      Left = 408
+      Left = 416
       Top = 112
       Width = 55
       Height = 15
       Caption = 'JABATAN'
+    end
+    object lbl9: TLabel
+      Left = 416
+      Top = 144
+      Width = 75
+      Height = 15
+      Caption = 'NO.TELEPON'
     end
     object edt1: TEdit
       Left = 104
@@ -123,46 +124,28 @@ object Form2: TForm2
       TabOrder = 1
       Text = 'edt2'
     end
-    object cbb1: TComboBox
+    object edt3: TEdit
       Left = 104
       Top = 112
       Width = 161
       Height = 23
-      ItemHeight = 15
       TabOrder = 2
-      Text = 'cbb1'
-    end
-    object edt3: TEdit
-      Left = 104
-      Top = 144
-      Width = 161
-      Height = 23
-      TabOrder = 3
       Text = 'edt3'
     end
     object edt4: TEdit
-      Left = 464
-      Top = 32
+      Left = 96
+      Top = 152
       Width = 177
       Height = 23
-      TabOrder = 4
+      TabOrder = 3
       Text = 'edt4'
     end
-    object cbb2: TComboBox
-      Left = 512
-      Top = 64
-      Width = 145
-      Height = 23
-      ItemHeight = 15
-      TabOrder = 5
-      Text = 'cbb2'
-    end
     object edt5: TEdit
-      Left = 472
-      Top = 112
+      Left = 512
+      Top = 32
       Width = 121
       Height = 23
-      TabOrder = 6
+      TabOrder = 4
       Text = 'edt5'
     end
     object btn1: TButton
@@ -171,7 +154,8 @@ object Form2: TForm2
       Width = 75
       Height = 25
       Caption = 'BARU'
-      TabOrder = 7
+      TabOrder = 5
+      OnClick = btn1Click
     end
     object btn2: TButton
       Left = 152
@@ -179,7 +163,8 @@ object Form2: TForm2
       Width = 75
       Height = 25
       Caption = 'SIMPAN'
-      TabOrder = 8
+      TabOrder = 6
+      OnClick = btn2Click
     end
     object btn3: TButton
       Left = 264
@@ -187,7 +172,8 @@ object Form2: TForm2
       Width = 75
       Height = 25
       Caption = 'UBAH'
-      TabOrder = 9
+      TabOrder = 7
+      OnClick = btn3Click
     end
     object btn4: TButton
       Left = 376
@@ -195,7 +181,7 @@ object Form2: TForm2
       Width = 75
       Height = 25
       Caption = 'HAPUS'
-      TabOrder = 10
+      TabOrder = 8
     end
     object btn5: TButton
       Left = 480
@@ -203,7 +189,7 @@ object Form2: TForm2
       Width = 75
       Height = 25
       Caption = 'BATAL'
-      TabOrder = 11
+      TabOrder = 9
     end
     object btn6: TButton
       Left = 584
@@ -211,12 +197,36 @@ object Form2: TForm2
       Width = 75
       Height = 25
       Caption = 'LAPORAN'
+      TabOrder = 10
+    end
+    object edt6: TEdit
+      Left = 512
+      Top = 72
+      Width = 121
+      Height = 23
+      TabOrder = 11
+      Text = 'edt6'
+    end
+    object edt7: TEdit
+      Left = 512
+      Top = 112
+      Width = 121
+      Height = 23
       TabOrder = 12
+      Text = 'edt7'
+    end
+    object edt8: TEdit
+      Left = 512
+      Top = 144
+      Width = 121
+      Height = 23
+      TabOrder = 13
+      Text = 'edt8'
     end
   end
   object dbgrd1: TDBGrid
     Left = 40
-    Top = 291
+    Top = 292
     Width = 697
     Height = 120
     DataSource = ds1
