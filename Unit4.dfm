@@ -11,6 +11,7 @@ object Form4: TForm4
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
@@ -78,6 +79,7 @@ object Form4: TForm4
       Height = 25
       Caption = 'BARU'
       TabOrder = 3
+      OnClick = btn1Click
     end
     object btn2: TButton
       Left = 128
@@ -86,6 +88,7 @@ object Form4: TForm4
       Height = 25
       Caption = 'SIMPAN'
       TabOrder = 4
+      OnClick = btn2Click
     end
     object btn3: TButton
       Left = 240
@@ -94,6 +97,7 @@ object Form4: TForm4
       Height = 25
       Caption = 'UBAH'
       TabOrder = 5
+      OnClick = btn3Click
     end
     object btn4: TButton
       Left = 24
@@ -132,6 +136,7 @@ object Form4: TForm4
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
