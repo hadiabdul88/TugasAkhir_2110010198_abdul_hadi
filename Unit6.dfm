@@ -3,7 +3,6 @@ object Form6: TForm6
   Top = 160
   Width = 870
   Height = 453
-  VertScrollBar.Position = 50
   Caption = 'Form6'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -17,7 +16,7 @@ object Form6: TForm6
   TextHeight = 13
   object lbl1: TLabel
     Left = 360
-    Top = -50
+    Top = 0
     Width = 70
     Height = 15
     Caption = 'DATA SISWA'
@@ -30,7 +29,7 @@ object Form6: TForm6
   end
   object pnl1: TPanel
     Left = 40
-    Top = -34
+    Top = 16
     Width = 737
     Height = 313
     TabOrder = 0
@@ -286,7 +285,7 @@ object Form6: TForm6
   end
   object dbgrd1: TDBGrid
     Left = 40
-    Top = 294
+    Top = 344
     Width = 737
     Height = 120
     DataSource = ds1

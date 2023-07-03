@@ -148,7 +148,7 @@ object Form5: TForm5
     end
     object edt1: TEdit
       Left = 96
-      Top = 56
+      Top = 64
       Width = 129
       Height = 21
       TabOrder = 1
@@ -287,9 +287,8 @@ object Form5: TForm5
   end
   object zqry1: TZQuery
     Connection = con1
-    Active = True
     SQL.Strings = (
-      'select * from table_catatan')
+      'select * from tabel_catatan')
     Params = <>
     Left = 752
     Top = 96
