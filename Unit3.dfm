@@ -1,6 +1,6 @@
 object Form3: TForm3
-  Left = 192
-  Top = 152
+  Left = 170
+  Top = 229
   Width = 870
   Height = 450
   Caption = 'Form3'
@@ -11,6 +11,7 @@ object Form3: TForm3
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
@@ -94,7 +95,6 @@ object Form3: TForm3
       Width = 201
       Height = 21
       TabOrder = 0
-      Text = 'edt1'
     end
     object edt2: TEdit
       Left = 56
@@ -102,56 +102,41 @@ object Form3: TForm3
       Width = 201
       Height = 21
       TabOrder = 1
-      Text = 'edt2'
-    end
-    object cbb1: TComboBox
-      Left = 88
-      Top = 104
-      Width = 97
-      Height = 21
-      ItemHeight = 13
-      TabOrder = 2
-      Text = 'cbb1'
     end
     object edt3: TEdit
-      Left = 80
-      Top = 136
+      Left = 88
+      Top = 104
       Width = 177
       Height = 21
-      TabOrder = 3
-      Text = 'edt3'
+      TabOrder = 2
     end
     object edt4: TEdit
-      Left = 528
-      Top = 16
+      Left = 80
+      Top = 136
+      Width = 185
+      Height = 21
+      TabOrder = 3
+    end
+    object edt5: TEdit
+      Left = 520
+      Top = 24
       Width = 185
       Height = 21
       TabOrder = 4
-      Text = 'edt4'
     end
-    object edt5: TEdit
-      Left = 528
-      Top = 48
+    object edt6: TEdit
+      Left = 520
+      Top = 56
       Width = 185
       Height = 21
       TabOrder = 5
-      Text = 'edt5'
     end
-    object edt6: TEdit
-      Left = 528
-      Top = 88
+    object edt7: TEdit
+      Left = 520
+      Top = 96
       Width = 185
       Height = 21
       TabOrder = 6
-      Text = 'edt6'
-    end
-    object edt7: TEdit
-      Left = 528
-      Top = 136
-      Width = 185
-      Height = 21
-      TabOrder = 7
-      Text = 'edt7'
     end
     object btn1: TButton
       Left = 32
@@ -159,7 +144,8 @@ object Form3: TForm3
       Width = 75
       Height = 25
       Caption = 'BARU'
-      TabOrder = 8
+      TabOrder = 7
+      OnClick = btn1Click
     end
     object btn2: TButton
       Left = 136
@@ -167,7 +153,8 @@ object Form3: TForm3
       Width = 75
       Height = 25
       Caption = 'SIMPAN'
-      TabOrder = 9
+      TabOrder = 8
+      OnClick = btn2Click
     end
     object btn3: TButton
       Left = 232
@@ -175,7 +162,8 @@ object Form3: TForm3
       Width = 75
       Height = 25
       Caption = 'UBAH'
-      TabOrder = 10
+      TabOrder = 9
+      OnClick = btn3Click
     end
     object btn4: TButton
       Left = 328
@@ -183,7 +171,8 @@ object Form3: TForm3
       Width = 75
       Height = 25
       Caption = 'HAPUS'
-      TabOrder = 11
+      TabOrder = 10
+      OnClick = btn4Click
     end
     object btn5: TButton
       Left = 424
@@ -191,14 +180,22 @@ object Form3: TForm3
       Width = 75
       Height = 25
       Caption = 'BATAL'
-      TabOrder = 12
+      TabOrder = 11
+      OnClick = btn5Click
     end
     object btn6: TButton
       Left = 528
       Top = 192
-      Width = 75
+      Width = 89
       Height = 25
       Caption = 'LAPORAN'
+      TabOrder = 12
+    end
+    object edt8: TEdit
+      Left = 520
+      Top = 128
+      Width = 185
+      Height = 21
       TabOrder = 13
     end
   end
@@ -214,6 +211,7 @@ object Form3: TForm3
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
